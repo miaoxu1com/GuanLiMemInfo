@@ -32,6 +32,8 @@ rem 创建并且切换分支 相当于git branch dev和git checkout dev
 git checkout -b dev
 rem  推送本地仓库到远程仓库  
 git push -u memInfo dev
+rem  显示远程仓库
+git remote show 
 rem  git  log
 pause
 
