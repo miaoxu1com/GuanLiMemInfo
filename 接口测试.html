@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<meta http-equiv="Access-Control-Allow-Origin" content="*" />
+<script src="http://libs.baidu.com/jquery/2.1.4/jquery.min.js"></script>
+<form action="http//apis.juhe.cn/mobile/get" method="get">
+		phone<input name="phone" type="text" value="66533">
+		key<input name="key" type="text" value="f5a2605eaeb3262f56c4efa0">
+		dtype<input name="dtype" type="text" value="json">
+		<button type="summit" id="Api">提交</button>
+</form>
+		
+<script>
+	$(document).ready(function(){
+		alert($)
+	})
+	$('#Api').click(function (){
+				 
+		})
+		$.ajax({
+					 url:'http://apis.juhe.cn/mobile/get',
+					 type:'get',
+					 contenType:"application/json;charset-utf-8",
+					 dataType:'json',
+					 async:true,
+					 data:{'phone':'66533','key':'f5a2605eaeb3262f56c4efa0'},					
+					 success:function (data) {
+						 alert(data);
+					 },
+					 crossDomain: true,
+					 error:function (XMLHttpRequest) {
+						 //console.log(JSON.stringify(jqXHR));
+							alert("Ajax请求失败，错误状态为："+XMLHttpRequest.status);
+					 }
+				 })
+</script>
